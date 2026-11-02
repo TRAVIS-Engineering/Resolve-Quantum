@@ -1,6 +1,6 @@
-# ResolveQuantum Website — Content Breakdown
+# ResolveQuantum Website — Historical Content Snapshot
 
-This document summarizes the current website content section‑by‑section.
+This is an older content snapshot, not the current source of truth. The live page now uses 250-895-9381 and Admin@resolvequantum.ca, has revised services and an About section, and uses an embedded Google Form. Inspect `index.html` for current content and `docs/search-visibility.md` for the 2026-11-02 search update.
 
 ---
 
