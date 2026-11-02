@@ -15,16 +15,19 @@ This is a single-page site plus a website privacy notice. Service-section anchor
 - Website privacy notice describes observed hosting, form and embedded providers. It is a site-specific transparency notice, not certification of PIPEDA compliance or a substitute for the business's full client-file retention/privacy procedures.
 - First-party contact-intent events (`resolve:contact`, detail.action = phone_click/email_click/open_form). These contain no visitor identity or form content and are not transmitted. They are integration hooks, not active GA4 tracking.
 
+- Google Search Console ownership verified with its downloaded HTML file; sitemap submitted successfully on 2026-11-02, status Success with two discovered pages. Keep the verification file published. Discovery is not a guarantee of indexing or ranking.
+- GoDaddy DNS: added one apex SPF record (`v=spf1 include:_spf.google.com ?all`) and DMARC monitoring (`v=DMARC1; p=none; rua=mailto:Admin@resolvequantum.ca`). Exact values verified on both authoritative nameservers and 1.1.1.1. Existing website routing, MX and verification records preserved.
+
+- Bing Webmaster Tools ownership verified using the downloaded XML file; sitemap accepted on 2026-11-02 and processing. Keep BingSiteAuth.xml published.
+
 ## Account/business dependencies still open
 
-1. Google Search Console: verify authorized ownership/access and submit https://www.resolvequantum.ca/sitemap.xml. An existing DNS Google verification token alone does not establish which account owns a property.
-2. Bing Webmaster Tools: verify property access and submit the same sitemap.
-3. GA4: obtain/use the real property/measurement ID and confirm the applicable consent setup before loading tags. Do not invent an ID or claim baseline/lead tracking is live. Update the privacy notice when analytics is enabled.
-4. Successful form submission tracking, an “I am a” field and confirmation/thank-you behavior require owner access to the existing Google Form. The cross-origin iframe cannot reliably report successful submissions to this static parent page. Do not count a form-open click as a submitted lead. Do not add a one-business-day response promise without business confirmation.
-5. Official business/profile links and actual office addresses are needed for sameAs/local-office schema and directory reconciliation. Do not substitute TRAVIS locations.
-6. Mail sender inventory and Google Workspace DKIM configuration are required before strict SPF/DMARC enforcement. Alex is unsure whether other services send mail. The intended initial SPF authorizes Google but leaves unknown senders neutral (`?all`); DMARC should remain monitoring (`p=none`) until legitimate sender alignment is verified. Account-generated DKIM keys must come from Workspace admin settings.
-7. Resolve-specific review/award/insurance evidence and any revised copy must come from actual business sources. Existing service descriptions and Derek Firth's existing credential wording were preserved.
-8. The business should review the privacy contact, retention procedures and any additional client-file practices that need a fuller policy.
+1. GA4: the currently signed-in account exposes only an unrelated Firebase property, with no web stream. Alex has been asked whether to create a separate Resolve Quantum account or arrange access to an existing business account. Obtain/use the real property/measurement ID and confirm the applicable consent setup before loading tags. Do not invent an ID or claim baseline/lead tracking is live. Update the privacy notice when analytics is enabled.
+2. Successful form submission tracking, an “I am a” field and confirmation/thank-you behavior require owner access to the existing Google Form. The cross-origin iframe cannot reliably report successful submissions to this static parent page. Do not count a form-open click as a submitted lead. Do not add a one-business-day response promise without business confirmation.
+3. Official business/profile links and actual office addresses are needed for sameAs/local-office schema and directory reconciliation. Do not substitute TRAVIS locations.
+4. Mail sender inventory and Google Workspace DKIM configuration are required before strict SPF/DMARC enforcement. Alex is unsure whether other services send mail. The published initial SPF authorizes Google but leaves unknown senders neutral (`?all`); DMARC remains monitoring (`p=none`) until legitimate sender alignment is verified. Account-generated DKIM keys must come from Workspace admin settings.
+5. Resolve-specific review/award/insurance evidence and any revised copy must come from actual business sources. Existing service descriptions and Derek Firth's existing credential wording were preserved.
+6. The business should review the privacy contact, retention procedures and any additional client-file practices that need a fuller policy.
 
 ## Items from the TRAVIS audit that do not transfer
 
